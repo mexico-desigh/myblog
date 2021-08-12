@@ -57,9 +57,10 @@
 <style lang="less">
   .AppNav {
     width: 100%;
-    height: 60px;
+    height: 50px;
     margin: 0 auto;
     margin-bottom: 20px;
+    border-bottom: 2px solid #e6e6e6;
     .appnav {
       max-width: 1300px;
       min-width: 800px;
@@ -68,15 +69,35 @@
       display: flex;
       justify-content: space-between;
       .name {
-        line-height: 60px;
+        line-height: 50px;
       }
       .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 400px;
+        box-sizing: border-box;
         a {
           text-decoration: none;
+        }
+        .el-menu-item {
+          border-bottom: 2px solid #8cc5ff;
+          height: 50px;
+          line-height: 50px;
+          box-sizing: content-box;
+          padding-bottom: 2px;
+
+        }
+                  .el-menu-item:hover {
+            border-bottom: 2px solid #8cc5ff;
+          }
+        .router-link-active {
+          color: #8cc5ff;
+        }
+        .el-menu-demo {
+          border-bottom: 2px solid #e6e6e6;
+          box-sizing: border-box;
+          height: 54px;
         }
       }
       .login {
