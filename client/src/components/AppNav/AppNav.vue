@@ -1,4 +1,5 @@
 <template>
+   import { log } from 'util';
   <div class="AppNav">
     <div class="appnav">
       <!-- 名字 -->
@@ -128,20 +129,28 @@
       handleSelect(key, keyPath) {
         // console.log(key, keyPath);
       },
-      // success() {
-      //   axios({
-      //     method: "get",
-      //     url: "http://localhost:8080/login",
-      //   }).then(res => {
-      //     console.log(res.data);
-      //   })
-      // },
+      success() {
+        this.ifshow = true;
+        console.log(this.ifshow);
+        // axios({
+        //   method: "get",
+        //   url: "http://localhost:8080/login",
+        // }).then(res => {
+        //   console.log(res.data);
+        // })
+      },
       // 表单验证
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           console.log(valid);
           if (valid) {
             alert('submit!');
+            axios({
+              method: "get",
+              url: "api/getUser",
+            }).then(res => {
+              console.log(res.data);
+            })
           } else {
             console.log('error submit!!');
             return false;
