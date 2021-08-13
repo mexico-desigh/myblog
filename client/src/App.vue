@@ -27,10 +27,14 @@
 </script>
 
 <style lang="less">
+  @import "../public/images/icon/iconfont.css";
+  @import "../public/style/reset.less";
   .container {
     max-width: 1300px;
     min-width: 800px;
     margin: 0 auto;
+    color: #707070;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .content {
     width: 900px;
@@ -40,5 +44,12 @@
   .flex {
     display: flex;
     justify-content: space-between;
+  }
+  .aside {
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px 17px;
+    background: white;
+    box-sizing: border-box;
   }
 </style>
